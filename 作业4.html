@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife</title>
+</head>
+<style>
+    body{background-image: url(e07f89c129ae1d3bab5d8c171c2055d.jpg);
+    background-repeat: no-repeat;}
+    
+    img{width:10%;
+     height: 50%;
+    float: left;}
+    
+    ul {    display: inline-block;
+            list-style-type: none;
+            margin: 8px;
+            padding: 0;
+            overflow: hidden;
+            }
+
+        li {
+            float: left;
+            }
+
+         a, .more {
+            display: inline-block;
+            color: rgb(134, 132, 132);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            }
+
+
+        .dropdown {
+            float: left;
+            }
+
+        .dropdown-menu {
+             display: none;
+             position: absolute;
+             background-color: white;
+            }
+
+        .dropdown-menu a {
+            color: rgb(150, 146, 146);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            }
+
+       
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            }
+
+
+
+.Search{width: 50px;
+         margin: 250px auto;
+         }
+         
+         input[type=text]{
+            width: 500px;
+            height: 40px;
+            border-radius: 15px;
+            border: 1px;
+            border-radius: 40px;
+            transition: width 0.4s ease-in-out;
+            background-image: url(R-C.png);
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: contain;
+            margin-left: -200px;
+            padding-left:30px;
+            background-color: rgb(248, 248, 248);
+            
+            }
+            input[type=text]:focus{width: 700px;}  
+
+        input[type=button] {
+            text-align: center;
+            margin-top: 30px;
+            padding: 5px 15px;
+            background-color: #fefeff;
+            color: rgb(132, 133, 134);
+            border: none;
+            border-radius: 5px;
+            }
+
+
+</style>
+
+<body>
+      <img src="微信图片_20230512141621.png">
+      <div class="ab">
+        <ul>
+        <li><a href="#">picture</a></li>
+        <li><a href="#">video</a></li>
+        <li><div class="dropdown">
+            <a href="#" class="more">more</a>
+            <div class="dropdown-menu">
+                <a href="#">map</a>
+                <a href="#">news</a>
+            </div>
+        </li>
+        </ul>
+        </div>
+    </div>
+
+
+    <div class="Search">
+        <form class="search">
+            <input type="text" name="q" >
+            <input type="button" value="search">
+        </form >
+    </div>
+    
+</body>
