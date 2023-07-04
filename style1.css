@@ -1,0 +1,134 @@
+
+body {background-color: rgb(221, 233, 218);
+	margin:6px;}
+
+
+    .logo{
+       text-decoration: none;
+	   color: #000;
+	}
+    #header{
+	    padding-bottom: 2px;
+		border-bottom: 1px solid;
+	}
+	.major{
+		margin:5px ;
+		padding-bottom: 2px;
+		border-bottom: 1px solid;
+	}
+	#banner{
+		margin: 0 -5px;
+		box-sizing:border-box;
+		border: 1px solid;
+		padding-top:10px;
+		padding: 15px;
+	}
+	#banner .content{float: left;
+		width: 25%;
+		box-sizing: border-box;
+		padding: 5px;
+		padding-top: 0;}
+   #banner .image{
+	width:100px;
+    height:auto;
+   }
+	.icons{
+		list-style-type: none;
+		margin-bottom: 10px;
+
+	}
+	#header li a{float: right;
+	padding: 10px;
+    display: block;
+    color: #000;
+    text-decoration: none;
+	}
+
+	#main{margin-left:20%;
+	      }
+    #sidebar{box-sizing: border-box;
+		     background-color: rgb(249, 255, 255);
+		     width: 15%;
+		     position: fixed;
+			 top: 0;
+			 left:0;
+			 padding:5px;
+			 overflow: auto;
+			 height:100%;
+			 margin: 0 10px;
+			 font-size: 10px;
+   }
+  
+   #footer{ bottom:0;
+             text-align: center;
+             background: #ddd;
+             margin-bottom: 0px;}
+    input[type=text]{border-radius: 4px;
+		             height: 20px;
+		             width:100px;
+		             transition: width 0.4s ease-in-out;} 
+    input[type=text]:focus{width:150px;}
+	
+	#menu{height: 300px;
+	}
+	#menu ul{
+		     list-style-type: none;
+	}
+	#menu li a {font-size: large;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: block;
+    color: #000;
+    padding: 30px 16px;
+    text-decoration: none;}
+ 
+	#menu li a:hover{background-color: black;
+	                 color:white;}
+
+    
+	p{
+		text-align: justify;
+		text-indent: 50px;
+	}
+	section  .content{box-sizing: border-box;
+		float: left;
+        width: 25%;
+		padding:6px;
+	}
+	section .image{
+		padding: 15px;
+		margin: 5px;
+	}
+    #banner header{font-size: larger;}
+	
+	article .content{
+		box-sizing: border-box;
+		float: left;
+        width: 25%;
+		border: 1px solid ;
+		padding:6px;
+	}
+	#banner .image{
+		height: 100px;
+	}
+	.features::after{clear: both;}
+
+	.posts article{
+		float: left;
+		width: 50%;
+		padding: 6px;
+		box-sizing: border-box;
+	}
+	.actions a{list-style-type: none;
+		 display:block; 
+		 width:70px;
+         height:16px;
+		 border:2px outset #eee;
+         background:#a4eca7;
+		 text-align:center;
+          font-size:12px; color:#000;
+		 text-decoration:none; 
+		 padding-top:2px;
+	}
+	.actions a:hover{border:2px inset #eee;
+		              background:#CCCCCC; 
+					  text-decoration:none;}

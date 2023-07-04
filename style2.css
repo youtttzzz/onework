@@ -1,0 +1,162 @@
+.logo{
+    text-decoration: none;
+    color: #000;
+ }
+
+header{
+ padding-bottom: 2px;
+ border-bottom: 2px double;
+}
+
+.icons{
+     list-style-type: none;
+     margin-bottom: 10px;
+
+ }
+#header li a{float: right;
+ padding: 10px;
+ display: block;
+ color: #000;
+ text-decoration: none;
+ }
+body:not(#menu){margin-left: 15%;
+background-color: azure;}
+
+#menu{box-sizing: border-box;
+ background-color: rgb(249, 255, 255);
+ width: 12%;
+ position: fixed;
+ top: 0;
+ left:0;
+ padding:5px 0;
+ height:100%;
+ font-size: large;
+ font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ overflow: auto;}
+
+#menu ul{
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+}
+
+#menu li {
+ float: left;
+}
+
+#menu li a {
+ display: block;
+ color: rgb(0, 0, 0);
+ text-align: center;
+ padding: 14px 16px;
+ text-decoration: none;
+}
+
+#menu li a:hover {
+ background-color: #111;
+ color: white;
+}
+
+#banner{
+ margin-top:10px;
+ padding: 20px;
+}
+
+
+.posts::after{
+ clear: both;
+}
+#sidebar .major {background-color: #CCCCCC;
+ overflow: hidden;
+}
+
+#sidebar .contact{
+ background-color: #CCCCCC;
+ overflow: hidden;
+}
+
+#sidebar:not(#menu){
+ margin: 10px;
+ padding-top: 2px;
+ font-size: 10px;
+} 
+
+
+#sidebar {
+ text-align: center;
+}
+
+.features .content{
+     float: left;
+     width: 50%;
+     padding: 6px;
+     box-sizing: border-box;
+     border: 1px dotted rgb(201,207, 192);
+     
+ }
+.feature .image{
+ display: block;
+ margin: auto;
+}
+h3{text-align: center;}
+.feature p{
+ text-indent: 10px;
+}
+
+article .content{
+     box-sizing: border-box;
+     float: left;
+     width: 25%;
+     border: 1px solid ;
+     padding:6px;
+ }
+ #banner .image{
+     height: 100px;
+ }
+ .features::after{clear: both;}
+
+ .posts article{
+     float: left;
+     width: 50%;
+     padding: 6px;
+     box-sizing: border-box;
+     border: 2px dashed rgb(201, 207, 192);
+ }
+ #banner{
+     margin: 0 -5px;
+     box-sizing:border-box;
+     border: 1px solid;
+     padding-top:10px;
+     padding: 15px;
+ }
+ #banner .content{float: left;
+     width: 25%;
+     box-sizing: border-box;
+     padding: 5px;
+     padding-top: 0;}
+#banner .image{
+ width:100px;
+ height:auto;
+}
+
+input[type=text]{border-radius: 10px;
+                  height: 20px;
+                  width:200px;
+                  transition: width 0.4s ease-in-out;} 
+input[type=text]:focus{width:300px;}
+
+.actions a{list-style-type: none;
+      display:block; 
+      width:70px;
+      height:16px;
+      border:2px outset #eee;
+      background:#818481;
+      text-align:center;
+      font-size:12px; color:#000;
+      text-decoration:none; 
+      padding-top:2px;
+ }
+.actions a:hover{border:2px inset #eee;
+             background:#CCCCCC; 
+             text-decoration:none;}
+
