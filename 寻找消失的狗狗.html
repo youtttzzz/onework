@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dog Game</title>
+</head>
+
+<style>
+    
+#field {
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: repeat-x;
+    position: relative;
+}
+
+
+.dog {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-image: url('images9.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+}
+
+
+</style>
+
+<body>
+    <button id="generate">Generate Dogs</button>
+    <button id="switch">Switch Background</button>
+    <button id="clear-bg">Clear Background</button>
+    <button id="clear">Clear Dogs</button> 
+    <div id="field"></div>
+    <input type="text" id="guess" placeholder="Guess the missing dog number">
+    <button id="submit">Submit</button>
+
+    <script>
+let dogs = [];
+let missingDog=null;
+let clickCount = 0;
+let images = ['ba1.jpg', 'ba7.jpg', 'ba8.jpg','ba4.jpg','ba5.jpg','ba9.jpg']; // replace with your image URLs
+let timer;
+let submitted = false;
+let timerDisappear;
+let guess;
+let missingDogIndex;
+
+    
+
+document.getElementById('generate').addEventListener('click', function() {
+    clearTimeout(timerDisappear); // clear the previous timer
+    clearTimeout(timer);
+    submitted = false;
+    dogs.forEach(dog => dog.remove());
+    dogs = [];
+
+    for (let i = 0; i < 10; i++) {
+        let dog = document.createElement('div');
+        dog.classList.add('dog');
+        dog.style.top = Math.random() * window.innerHeight + 'px';
+        dog.style.left = Math.random() * window.innerWidth + 'px';
+        dog.textContent = i + 1;
+        dogs.push(dog);
+        document.getElementById('field').appendChild(dog);
+    }
+
+    timerDisappear = setTimeout(function() {
+        if (dogs.length > 0) {
+            missingDogIndex = Math.floor(Math.random() * dogs.length);
+            dogs[missingDogIndex].style.display = 'none';
+            dogs.splice(missingDogIndex, 1); // remove the missing dog from the array
+        }
+    }, 10000);
+
+    timer = setTimeout(function() {
+        if (!submitted) {
+            dogs.forEach(dog => dog.remove());
+            dogs = [];
+            alert('Time is up!');
+        }
+    }, 15000);
+});
+
+
+
+document.getElementById('switch').addEventListener('click', function() {
+    document.body.style.backgroundImage = 'url(' + images[Math.floor(Math.random() * images.length)] + ')';
+});
+
+document.getElementById('clear-bg').addEventListener('click', function() {
+    document.body.style.background = "#FFFFFF"; // replace with your default background
+});
+
+
+document.getElementById('clear').addEventListener('click', function() {
+    dogs.forEach(function(dog) {
+        dog.style.display = 'none'; // hide the dog
+    });
+    dogs = []; // clear the array
+    missingDogIndex = null; // reset the missing dog index
+});
+
+document.getElementById('submit').addEventListener('click', function() {
+    let userAnswer = document.getElementById('guess').value; // replace 'answer' with the id of your input field
+    if (parseInt(userAnswer) === missingDogIndex + 1) {
+        alert("Congratulations!");
+        clearTimeout(timer);
+    } else {
+        alert("Sorry, that's incorrect. The missing dog's number is " + (missingDogIndex + 1));
+    }
+});
+    </script>
+
+</body>
+
+</html>
